@@ -23,29 +23,9 @@ Une fois ce formulaire rempli, il aura accès à son profil personnel qui lui pr
 
 ## USE CASE
 
-![socialfit_USECASE](/src/assets/conception/socialfit_USECASE.jpg)
+![socialfit_USECASE](/public/assets/conception/socialfit_USECASE.jpg)
 
 ## Demo
 
 https://www.figma.com/proto/HStlW5ZWES5LI4KxMzr2ga/Sales-Apps?node-id=0%3A11&scaling=scale-down
 
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
