@@ -34,6 +34,41 @@ class User implements UserInterface
      */
     private $password;
 
+    /**
+     * @ORM\Column(type="string", length=12)
+     */
+    private $username;
+
+    /**
+     * @ORM\Column(type="array")
+     */
+    private $gender = [];
+
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $birthDate;
+
+    /**
+     * @ORM\Column(type="array")
+     */
+    private $sportsHall = [];
+
+    /**
+     * @ORM\Column(type="array", nullable=true)
+     */
+    private $goal = [];
+
+    /**
+     * @ORM\Column(type="time", nullable=true)
+     */
+    private $availability;
+
+    /**
+     * @ORM\Column(type="array")
+     */
+    private $trainingPartner = [];
+
     public function getId(): ?int
     {
         return $this->id;
@@ -110,5 +145,84 @@ class User implements UserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function setUsername(string $username): self
+    {
+        $this->username = $username;
+
+        return $this;
+    }
+
+    public function getGender(): ?array
+    {
+        return $this->gender;
+    }
+
+    public function setGender(array $gender): self
+    {
+        $this->gender = $gender;
+
+        return $this;
+    }
+
+    public function getBirthDate(): ?\DateTimeInterface
+    {
+        return $this->birthDate;
+    }
+
+    public function setBirthDate(\DateTimeInterface $birthDate): self
+    {
+        $this->birthDate = $birthDate;
+
+        return $this;
+    }
+
+    public function getSportsHall(): ?array
+    {
+        return $this->sportsHall;
+    }
+
+    public function setSportsHall(array $sportsHall): self
+    {
+        $this->sportsHall = $sportsHall;
+
+        return $this;
+    }
+
+    public function getGoal(): ?array
+    {
+        return $this->goal;
+    }
+
+    public function setGoal(?array $goal): self
+    {
+        $this->goal = $goal;
+
+        return $this;
+    }
+
+    public function getAvailability(): ?\DateTimeInterface
+    {
+        return $this->availability;
+    }
+
+    public function setAvailability(?\DateTimeInterface $availability): self
+    {
+        $this->availability = $availability;
+
+        return $this;
+    }
+
+    public function getTrainingPartner(): ?array
+    {
+        return $this->trainingPartner;
+    }
+
+    public function setTrainingPartner(array $trainingPartner): self
+    {
+        $this->trainingPartner = $trainingPartner;
+
+        return $this;
     }
 }
