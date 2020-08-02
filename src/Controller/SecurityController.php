@@ -10,15 +10,19 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 /**
- * @Route("/api")
+ * @Route("/api") 
+ * This controller is used for the authentication on the app
  */
 class SecurityController extends AbstractController
 {
      /**
-     * @Route("/register", methods="POST")
+     * @Route("/register", methods="POST") 
+     * this method creates a new User based on UserType form,
+     * if the form is submitted and valid, then it flushes the new User
+     * in User table, and send a 201 response.
+     * If there is an error it will send an error response
      */
     public function register(Request $request, EntityManagerInterface $managerInterface, UserPasswordEncoderInterface $encoder)
     {
@@ -52,6 +56,7 @@ class SecurityController extends AbstractController
     }
      /**
      * @Route(methods="GET")
+     * This method is watching which user is currently connected
      */
     public function currentUser() {
         $user = $this->getUser();
