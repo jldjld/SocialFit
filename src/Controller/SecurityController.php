@@ -10,10 +10,14 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
-class ApiAuthController extends AbstractController
-{
 /**
+ * @Route("/api")
+ */
+class SecurityController extends AbstractController
+{
+     /**
      * @Route("/register", methods="POST")
      */
     public function register(Request $request, EntityManagerInterface $managerInterface, UserPasswordEncoderInterface $encoder)

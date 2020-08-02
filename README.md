@@ -25,7 +25,6 @@ Une fois ce formulaire rempli, il aura accès à son profil personnel qui lui pr
 
 ![socialfit_USECASE](/public/assets/conception/socialfit_USECASE.jpg)
 
-## Demo
+## Prototype en version mobile-first
 
 https://www.figma.com/proto/HStlW5ZWES5LI4KxMzr2ga/Sales-Apps?node-id=0%3A11&scaling=scale-down
-
